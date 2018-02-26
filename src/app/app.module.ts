@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 
 
 import { AppComponent } from './app.component';
+
 import { ContctoComponent } from './contcto/contcto.component';
 
 import { HomeComponent } from './home/home.component';
@@ -15,6 +16,9 @@ import { HomeComponent } from './home/home.component';
 import { MitrabajoComponent } from './mitrabajo/mitrabajo.component';
 
 
+import { ProductosComponent } from './productos/productos.component';
+
+
 import { HomeComponent } from './home/home.component';
 
 import { MitrabajoComponent } from './mitrabajo/mitrabajo.component';
@@ -25,6 +29,9 @@ import { MitrabajoComponent } from './mitrabajo/mitrabajo.component';
   declarations: [
     AppComponent,
 
+    ProductosComponent
+
+
     HomeComponent,
 
 
@@ -33,6 +40,7 @@ import { MitrabajoComponent } from './mitrabajo/mitrabajo.component';
 
  
     MitrabajoComponent
+
 
   ],
   imports: [
