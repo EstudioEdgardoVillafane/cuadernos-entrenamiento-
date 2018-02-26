@@ -3,7 +3,21 @@ import { NgModule } from '@angular/core';
 
 
 import { AppComponent } from './app.component';
+
+import { ContctoComponent } from './contcto/contcto.component';
+
+import { HomeComponent } from './home/home.component';
+
+import { MitrabajoComponent } from './mitrabajo/mitrabajo.component';
+
+
+import { HomeComponent } from './home/home.component';
+
+import { MitrabajoComponent } from './mitrabajo/mitrabajo.component';
+
+
 import { ProductosComponent } from './productos/productos.component';
+
 
 import { HomeComponent } from './home/home.component';
 
@@ -14,15 +28,20 @@ import { MitrabajoComponent } from './mitrabajo/mitrabajo.component';
 @NgModule({
   declarations: [
     AppComponent,
-<<<<<<< HEAD
+
     ProductosComponent
-=======
+
 
     HomeComponent,
 
+
+    ContctoComponent,
+
+
+ 
     MitrabajoComponent
 
->>>>>>> 5c4fb8ff503bb9cb2dcca127e98aa35cf301291a
+
   ],
   imports: [
     BrowserModule
