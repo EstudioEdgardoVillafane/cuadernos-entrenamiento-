@@ -15,6 +15,11 @@ import { HomeComponent } from './home/home.component';
 import { MitrabajoComponent } from './mitrabajo/mitrabajo.component';
 
 
+import { HomeComponent } from './home/home.component';
+
+import { MitrabajoComponent } from './mitrabajo/mitrabajo.component';
+
+
 
 @NgModule({
   declarations: [
@@ -22,8 +27,11 @@ import { MitrabajoComponent } from './mitrabajo/mitrabajo.component';
 
     HomeComponent,
 
+
     ContctoComponent,
 
+
+ 
     MitrabajoComponent
 
   ],

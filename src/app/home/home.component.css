@@ -1,0 +1,11 @@
+#fondo{
+    background-image: url("http://cuadernosartesanales.com.ar/img/bg1.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    height: 90vh;
+    background-attachment: fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
