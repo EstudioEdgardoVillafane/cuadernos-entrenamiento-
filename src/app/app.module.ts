@@ -22,6 +22,7 @@ import { ProductosComponent } from './productos/productos.component';
 import { HomeComponent } from './home/home.component';
 
 import { MitrabajoComponent } from './mitrabajo/mitrabajo.component';
+import { FooterComponent } from './footer/footer.component';
 
 
 
@@ -39,7 +40,11 @@ import { MitrabajoComponent } from './mitrabajo/mitrabajo.component';
 
 
  
-    MitrabajoComponent
+    MitrabajoComponent,
+
+
+ 
+    FooterComponent
 
 
   ],
