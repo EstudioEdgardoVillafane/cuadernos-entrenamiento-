@@ -8,14 +8,10 @@ import { ContctoComponent } from './contcto/contcto.component';
 
 
 
-
-import { HomeComponent } from './home/home.component';
-
-import { MitrabajoComponent } from './mitrabajo/mitrabajo.component';
-
-
 import { ProductosComponent } from './productos/productos.component';
-
+import { NavbarComponent } from './navbar/navbar.component';
+import { HomeComponent } from './home/home.component';
+import { MitrabajoComponent } from './mitrabajo/mitrabajo.component';
 
 
 
@@ -35,7 +31,11 @@ import { ProductosComponent } from './productos/productos.component';
 
 
  
-    MitrabajoComponent
+    MitrabajoComponent,
+
+
+ 
+    NavbarComponent
 
 
   ],
