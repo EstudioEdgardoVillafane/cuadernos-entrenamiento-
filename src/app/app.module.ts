@@ -1,55 +1,30 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import { CarouselModule } from 'ngx-bootstrap/carousel';
 
 import { AppComponent } from './app.component';
-
 import { ContctoComponent } from './contcto/contcto.component';
-
-import { HomeComponent } from './home/home.component';
-
-import { MitrabajoComponent } from './mitrabajo/mitrabajo.component';
-
-
-import { HomeComponent } from './home/home.component';
-
-import { MitrabajoComponent } from './mitrabajo/mitrabajo.component';
-
-
 import { ProductosComponent } from './productos/productos.component';
-
-
 import { HomeComponent } from './home/home.component';
-
 import { MitrabajoComponent } from './mitrabajo/mitrabajo.component';
 import { FooterComponent } from './footer/footer.component';
-
-
 
 @NgModule({
   declarations: [
     AppComponent,
 
-    ProductosComponent
-
-
+    ProductosComponent,
     HomeComponent,
-
-
     ContctoComponent,
-
-
- 
     MitrabajoComponent,
-
-
- 
     FooterComponent
-
 
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    NgbModule,
+    CarouselModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]

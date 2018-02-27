@@ -1,4 +1,4 @@
-#fondo{
+/* #fondo{
     background-image: url("http://cuadernosartesanales.com.ar/img/bg1.jpg");
     background-position: center center;
     background-repeat: no-repeat;
@@ -8,4 +8,17 @@
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+} */
+#carrusel img{
+    height: 500px !important;
+    
+   
 }
+
+#velo{
+     background-color: black;
+    z-index: 15;
+    height: 100%;
+    width: 100%;
+}
+  
