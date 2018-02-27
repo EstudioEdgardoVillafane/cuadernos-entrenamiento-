@@ -1,0 +1,11 @@
+.nav-link{
+    color:white!important;
+    cursor: pointer;
+    font-size: 14px!important;
+}
+.nav-link:hover{
+    color:pink!important;
+}
+.a-logo{
+    font-family: 'Kaushan Script', cursive;
+}

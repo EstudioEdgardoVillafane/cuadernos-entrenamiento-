@@ -10,18 +10,8 @@ import { HomeComponent } from './home/home.component';
 
 import { MitrabajoComponent } from './mitrabajo/mitrabajo.component';
 
-
-import { HomeComponent } from './home/home.component';
-
-import { MitrabajoComponent } from './mitrabajo/mitrabajo.component';
-
-
 import { ProductosComponent } from './productos/productos.component';
-
-
-import { HomeComponent } from './home/home.component';
-
-import { MitrabajoComponent } from './mitrabajo/mitrabajo.component';
+import { NavbarComponent } from './navbar/navbar.component';
 
 
 
@@ -29,7 +19,7 @@ import { MitrabajoComponent } from './mitrabajo/mitrabajo.component';
   declarations: [
     AppComponent,
 
-    ProductosComponent
+    ProductosComponent,
 
 
     HomeComponent,
@@ -39,7 +29,11 @@ import { MitrabajoComponent } from './mitrabajo/mitrabajo.component';
 
 
  
-    MitrabajoComponent
+    MitrabajoComponent,
+
+
+ 
+    NavbarComponent
 
 
   ],
