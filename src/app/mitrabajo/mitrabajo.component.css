@@ -1,0 +1,30 @@
+#fondomitrabajo{
+    
+    background-position: center center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    color:black;
+    background-color: pink;
+    
+    
+}
+h2{
+    color: #fff;
+    text-shadow:2px 2px 2px black; 
+
+
+
+}
+hr{
+    width: 30%;
+    
+    border: 2px solid black;
+    box-shadow: 2px 2px 2px white;
+
+
+}
