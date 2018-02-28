@@ -5,10 +5,13 @@ import { CarouselModule } from 'ngx-bootstrap/carousel';
 
 import { AppComponent } from './app.component';
 import { ContctoComponent } from './contcto/contcto.component';
+
 import { ProductosComponent } from './productos/productos.component';
+import { NavbarComponent } from './navbar/navbar.component';
 import { HomeComponent } from './home/home.component';
 import { MitrabajoComponent } from './mitrabajo/mitrabajo.component';
 import { FooterComponent } from './footer/footer.component';
+
 
 @NgModule({
   declarations: [
@@ -18,8 +21,8 @@ import { FooterComponent } from './footer/footer.component';
     HomeComponent,
     ContctoComponent,
     MitrabajoComponent,
-    FooterComponent
-
+    FooterComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,

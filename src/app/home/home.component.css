@@ -1,24 +1,17 @@
-/* #fondo{
-    background-image: url("http://cuadernosartesanales.com.ar/img/bg1.jpg");
+#fondo{
+    background-image: url("../../assets/img/bg1.jpg");
     background-position: center center;
     background-repeat: no-repeat;
-    height: 90vh;
+    height: 100vh;
     background-attachment: fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-} */
-#carrusel img{
-    height: 500px !important;
-    
-   
+    color:white;
+    text-shadow: 2px 2px 2px black;
 }
-
-#velo{
-     background-color: black;
-    z-index: 15;
-    height: 100%;
-    width: 100%;
+.font-toto{
+    font-family: 'Kaushan Script', cursive;
+    text-shadow: 6px 2px 2px black;
 }
-  

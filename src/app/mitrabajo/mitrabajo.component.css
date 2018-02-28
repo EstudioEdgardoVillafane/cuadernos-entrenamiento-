@@ -1,0 +1,21 @@
+section{
+    padding: 30px 0;
+    background-image: url("assets/img/birds.jpg");
+    background-color: rgb(240, 121, 220);
+    background-blend-mode: screen;
+}
+img{
+    transition: all 3s ease-in-out;
+}
+.thumb:hover {
+    /* clip-path: inset(10px 20px 30px 40px); */
+    background-color: #d43076;
+    
+  }
+
+
+  body {
+    background: #000;
+  }
+  
+ 
