@@ -5,6 +5,17 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing/app-routing.module';
 import { FormsModule }    from '@angular/forms';
 
+
+import { AppComponent } from './app.component';
+
+import { ContctoComponent } from './contcto/contcto.component';
+
+import { HomeComponent } from './home/home.component';
+  
+import { MitrabajoComponent } from './mitrabajo/mitrabajo.component';
+
+import { ProductosComponent } from './productos/productos.component';
+
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { CarouselModule } from 'ngx-bootstrap/carousel';
 
@@ -20,11 +31,17 @@ import { FooterComponent } from './footer/footer.component';
 
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
 
     ProductosComponent,
+
+
+
+
+
     HomeComponent,
     ContctoComponent,
     MitrabajoComponent,
