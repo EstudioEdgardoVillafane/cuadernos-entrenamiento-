@@ -5,11 +5,8 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing/app-routing.module';
 import { FormsModule }    from '@angular/forms';
 
-
-
-
 //import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
-//import { CarouselModule } from 'ngx-bootstrap/carousel';
+import { CarouselModule } from 'ngx-bootstrap/carousel';
 
 
 import { AppComponent } from './app.component';
@@ -29,11 +26,6 @@ import { FooterComponent } from './footer/footer.component';
     AppComponent,
 
     ProductosComponent,
-
-
-
-
-
     HomeComponent,
     ContctoComponent,
     MitrabajoComponent,
@@ -45,10 +37,9 @@ import { FooterComponent } from './footer/footer.component';
 
     //NgbModule.forRoot (),
     AppRoutingModule,
-    FormsModule
-
-   // NgbModule,
-   // CarouselModule.forRoot()
+    FormsModule,
+  // NgbModule,
+   CarouselModule.forRoot()
 
   ],
   providers: [],
