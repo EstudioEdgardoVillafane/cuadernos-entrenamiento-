@@ -1,11 +1,18 @@
 #fondo{
-    background-image: url("http://cuadernosartesanales.com.ar/img/bg1.jpg");
+    background-image: url("../../assets/img/bg1.jpg");
     background-position: center center;
     background-repeat: no-repeat;
-    height: 90vh;
+    height: 100vh;
+    width: 100%;
     background-attachment: fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+    color:white;
+    text-shadow: 2px 2px 2px black;
+}
+.font-toto{
+    font-family: 'Kaushan Script', cursive;
+    text-shadow: 6px 2px 2px black;
 }
