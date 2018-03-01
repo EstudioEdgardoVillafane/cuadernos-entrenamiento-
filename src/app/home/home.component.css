@@ -11,6 +11,9 @@
     background-size: cover;
     color:white;
     text-shadow: 2px 2px 2px black;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    
 }
 .font-toto{
     font-family: 'Kaushan Script', cursive;
