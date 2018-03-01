@@ -1,0 +1,22 @@
+section{
+    padding: 65px 65px;
+    background-image: url("assets/img/birds.jpg");
+    background-color: rgb(240, 121, 220);
+    background-blend-mode: screen;
+    
+    
+}
+img{
+    transition: all 3s ease-in-out;
+}
+.thumb:hover {
+    background-color: #d43076;
+  }
+
+.text-styled{
+    font-family: 'Kaushan Script', cursive;
+    color:#a91f5a;
+}
+p{
+    color:#fb1478;
+}

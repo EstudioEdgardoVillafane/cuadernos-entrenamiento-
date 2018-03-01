@@ -10,7 +10,7 @@ import { ProductosComponent } from '../productos/productos.component';
 const routes: Routes = [
   //ruta para redireccionar (a home) cuando se entra a la raíz del proyecto:
   { path: '', redirectTo: '/home', pathMatch: 'full'},
-  { path: 'productos/:id', component: ProductosComponent},
+  { path: 'productos', component: ProductosComponent},
   { path: 'home', component: HomeComponent},
   { path: 'mitrabajo', component: MitrabajoComponent},
   { path: 'contcto', component:  ContctoComponent}
