@@ -1,0 +1,33 @@
+#formu{
+    width:100%;
+  
+    background-attachment: fixed;
+  
+    background-image: url("assets/img/birds.jpg");
+    background-repeat: repeat;
+    background-color: rgb(240, 121, 220);
+    background-blend-mode: screen;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    color:black;
+   
+
+
+}
+.formulario{
+    float: left;
+
+
+}
+
+.logo{
+    float: left;
+
+
+}
+ .rosa{
+    font-family: 'Kaushan Script', cursive;
+    color:#a91f5a;
+ }
