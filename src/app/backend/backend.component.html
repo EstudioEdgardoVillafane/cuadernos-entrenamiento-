@@ -7,7 +7,7 @@
       
     </div>
     <ng-template #other_content>
-      <div *ngIf="toto2;else otr">
+      <div *ngIf="ette;else otr">
       <div class="row text-center">
         <div class="col-12">
         <h2>Agregar nuevo cuaderno</h2>
@@ -61,7 +61,57 @@
      </div>
     </div>
     <ng-template #otr>
-      hola
+        <div class="row text-center">
+            <div class="col-12">
+            <h2>Editar cuaderno</h2>
+            <hr>
+          </div>
+          </div>
+        
+        <div class="row">
+          <div class="col-6">
+            <label>Nombre</label>
+          </div>
+          <div class="col-6">
+            <input id="nombre-ed" value="{{ListEdit.nombre}}" placeholder="Nombre" class="form-control">
+          </div>
+          </div>
+          
+          <div class="row">
+            <div class="col-6">
+              <label>Categoria</label>
+            </div>
+          <div class="col-6">
+            <input class="form-control mt-2" id="categoria-ed" value="{{ListEdit.categoria}}" placeholder="Categoria">
+          </div>
+          </div>
+          <div class="row"> 
+            <div class="col-6">
+              <label>Precio</label>
+            </div>
+          <div class="col-6">   
+            <input id="precio-ed" value="{{ListEdit.precio}}" class="mt-2 form-control" placeholder="Precio">
+          </div>
+        </div>
+        <div class="row">
+            <div class="col-6">
+              <label>Descripcion</label>
+            </div>
+            <div class="col-6">
+              <textarea id="descripcion-ed" value="{{ListEdit.descripcion}}" placeholder="Descripcion" class="mt-2 form-control"></textarea>
+            </div>
+            </div>
+        <div class="row mb-2 text-center">
+          <div class="col-12">
+            <hr>
+          </div>
+          </div>
+          <div class="row">
+            <div class="col-12">
+              <button class="pull-right btn btn-md btn-danger ml-1" (click)="Return()">Volver</button>
+              <button class="pull-right btn btn-md btn-primary" (click)="EditIt(ListEdit.id)">Editar</button>
+            </div>
+         </div>
     </ng-template>
     </ng-template>
     <div *ngIf="ViewInsert;else other_content" class="mt-3">
@@ -78,7 +128,7 @@
         <table class="table table-bordered mt-3"  width="100%">
             <thead>
               <tr>
-                <th style="width: 1px;"><input type="checkbox" id="todos"></th>
+                <th style="width: 1px;">#</th>
                 <th>Nombre</th>
                 <th>Descripción</th>
                 <th>Categoria</th>
@@ -94,7 +144,7 @@
                 <td>{{toto.categoria}}</td>
                 <td>{{toto.precio}}</td>
                 <td>
-                  <button value="{{toto.id}}">
+                  <button value="{{toto.id}}" (click)="ShowEd(toto.id)">
                     <i class="fa fa-pencil"></i>
                   </button>
                 </td>

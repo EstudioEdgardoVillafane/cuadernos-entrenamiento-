@@ -15,6 +15,14 @@
 		$sql = "INSERT INTO producto (nombre,descripcion,precio,categoria,status) 
 		VALUES ('".$_GET["name"]."','".$_GET["desc"]."','".$_GET["precio"]."','".$_GET["categ"]."','1')";
 		$NewConnect->ExecuteSql($sql);
+	}elseif($_GET["data"]==4){
+		$sql="UPDATE producto SET
+		nombre = '".$_GET["name"]."',
+		descripcion = '".$_GET["desc"]."',
+		precio = '".$_GET["precio"]."',
+		categoria = '".$_GET["categ"]."' WHERE id = '".$_GET["id"]."'";
+		$NewConnect->ExecuteSql($sql);
+
 	}
 
 ?>

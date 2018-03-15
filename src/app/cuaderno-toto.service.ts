@@ -17,5 +17,8 @@ export class CuadernoTotoService {
   Conect(Funct: number, id : number, name : string, desc : string, categ : number, precio : number){
     return this.Http.get('http://localhost/cuadernos/src/php/list-cuaderno.php?data='+Funct+'&id='+id+"&name="+name+"&desc="+desc+"&categ="+categ+"&precio="+precio);
      //Devuelve el resultado del php como objeto.
+  }
+  getJsonID(id : number, json){
+    return of(json.find(primero => primero.id === id));
   }    
 }

@@ -15,7 +15,8 @@ import { catchError, map, tap } from 'rxjs/operators';
 export class BackendComponent implements OnInit {
 
   constructor(private totoService: CuadernoTotoService) { }
-
+  
+  ette = true;
   listado;
   lix;
   CheckAcumulador = new Array();
@@ -28,8 +29,27 @@ export class BackendComponent implements OnInit {
   precio;
   categoria;
   ViewInsert = true;
-  
+  ListEdit;
   ngOnInit() {
+    this.Listar();
+  }
+  EditIt(id : number){
+    this.nombre = document.getElementById("nombre-ed");
+    this.categoria = document.getElementById("categoria-ed");
+    this.descripcion = document.getElementById("descripcion-ed");
+    this.precio = document.getElementById("precio-ed");
+
+    this.totoService.Conect(
+    4,
+    id,
+    this.nombre.value,
+    this.descripcion.value,
+    this.categoria.value,
+    this.precio.value
+    )
+    .subscribe((data) => { 
+      this.lix = data;
+    });
     this.Listar();
   }
   Show(){
@@ -37,6 +57,7 @@ export class BackendComponent implements OnInit {
   }
   Return(){
     this.ViewInsert = true;
+    this.ette = true;
   }
   Listar(){
     this.totoService.Conect(1,0,"0","0",0,0)
@@ -45,6 +66,7 @@ export class BackendComponent implements OnInit {
       this.listado = data;
     });
   }
+
   onDelete(id : number){
     this.Booleano=true;    
     console.log("Contador: " + this.NumberAux);
@@ -82,6 +104,15 @@ export class BackendComponent implements OnInit {
     }
     this.Listar(); 
   }
+
+  ShowEd(id : number){
+    this.ette = false;
+    this.ViewInsert=false;
+    this.totoService.getJsonID(id,this.listado)
+    .subscribe(resultado => this.ListEdit = resultado);
+ 
+  }
+
   ShowIt(){
     this.nombre = document.getElementById("nombre");
     this.categoria = document.getElementById("categoria");
@@ -100,7 +131,7 @@ export class BackendComponent implements OnInit {
       this.lix = data;
     });
     this.Listar();
-    
+
     this.ViewInsert=true;
   }
  
