@@ -22,13 +22,13 @@ export class ProductosComponent implements OnInit {
   //Definimos el servicio en forma privada MUY IMPORTANTE.
 
   ngOnInit() {
-    this.totoService.Listar()
+    this.totoService.Conect(1,0,"0","0",0,0)
     .map((response) => response.json())
     .subscribe((data) => { 
       this.listado = data;
     });
     //Llamamos a la funcion lista dentro de los servicios de toto y transformamos su resultado en un json que se almacena en Listado.
   }
- 
+  
 }
 

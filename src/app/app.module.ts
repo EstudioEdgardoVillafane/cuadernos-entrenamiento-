@@ -16,6 +16,7 @@ import { HomeComponent } from './home/home.component';
 import { MitrabajoComponent } from './mitrabajo/mitrabajo.component';
 import { FooterComponent } from './footer/footer.component';
 import { CuadernoTotoService } from '../app/cuaderno-toto.service';
+import { BackendComponent } from './backend/backend.component';
 
 
 @NgModule({
@@ -26,7 +27,8 @@ import { CuadernoTotoService } from '../app/cuaderno-toto.service';
     ContctoComponent,
     MitrabajoComponent,
     FooterComponent,
-    NavbarComponent
+    NavbarComponent,
+    BackendComponent
   ],
   imports: [
     BrowserModule,
