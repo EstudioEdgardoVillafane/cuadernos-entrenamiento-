@@ -1,33 +1,44 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { AppRoutingModule } from './app-routing/app-routing.module';
+import { FormsModule }    from '@angular/forms';
+import { CarouselModule } from 'ngx-bootstrap/carousel';
+import { HttpModule } from '@angular/http';
+import { HttpClientModule }    from '@angular/common/http';
 
+//Importamos los dos modulos HTTP 
 
 import { AppComponent } from './app.component';
+import { ContctoComponent } from './contcto/contcto.component';
 import { ProductosComponent } from './productos/productos.component';
-
+import { NavbarComponent } from './navbar/navbar.component';
 import { HomeComponent } from './home/home.component';
-
 import { MitrabajoComponent } from './mitrabajo/mitrabajo.component';
-
-
+import { FooterComponent } from './footer/footer.component';
+import { CuadernoTotoService } from '../app/cuaderno-toto.service';
+import { BackendComponent } from './backend/backend.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-<<<<<<< HEAD
-    ProductosComponent
-=======
-
+    ProductosComponent,
     HomeComponent,
-
-    MitrabajoComponent
-
->>>>>>> 5c4fb8ff503bb9cb2dcca127e98aa35cf301291a
+    ContctoComponent,
+    MitrabajoComponent,
+    FooterComponent,
+    NavbarComponent,
+    BackendComponent
   ],
   imports: [
-    BrowserModule
-  ],
-  providers: [],
+    BrowserModule,
+    HttpModule,
+    AppRoutingModule,
+    FormsModule,
+    CarouselModule.forRoot(),
+    HttpClientModule,
+    
+ ],
+  providers: [CuadernoTotoService],       //IMPORTAR LOS SERVICIOS
   bootstrap: [AppComponent]
 })
 export class AppModule { }
