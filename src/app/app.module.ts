@@ -39,7 +39,7 @@ import { CategoriasService } from './categorias.service';
 
     BackendUsuarioComponent,
     AdminComponent,
-    NavBackendComponent
+    NavBackendComponent,
 
     CategoriasComponent
 
@@ -54,9 +54,7 @@ import { CategoriasService } from './categorias.service';
     
  ],
 
-  providers: [CuadernoTotoService, UsuerService],       //IMPORTAR LOS SERVICIOS
-
-  providers: [CuadernoTotoService,CategoriasService],       //IMPORTAR LOS SERVICIOS
+  providers: [CuadernoTotoService, UsuerService, CategoriasService],       //IMPORTAR LOS SERVICIOS
 
   bootstrap: [AppComponent]
 })

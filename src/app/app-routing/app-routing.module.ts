@@ -20,12 +20,9 @@ const routes: Routes = [
   { path: 'home', component: HomeComponent},
   { path: 'mitrabajo', component: MitrabajoComponent},
   { path: 'contcto', component:  ContctoComponent},
-
   { path: 'admin', component: AdminComponent},
   { path: 'bac-productos', component: BackendComponent },
-  { path: 'user', component: BackendUsuarioComponent }
-
-  { path: 'admin', component: BackendComponent},
+  { path: 'user', component: BackendUsuarioComponent },
   { path: 'categorias',component: CategoriasComponent}
 
 ];
