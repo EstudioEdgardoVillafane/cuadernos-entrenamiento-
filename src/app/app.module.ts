@@ -17,10 +17,15 @@ import { MitrabajoComponent } from './mitrabajo/mitrabajo.component';
 import { FooterComponent } from './footer/footer.component';
 import { CuadernoTotoService } from '../app/cuaderno-toto.service';
 import { BackendComponent } from './backend/backend.component';
+
 import { BackendUsuarioComponent } from './backend-usuario/backend-usuario.component';
 import { AdminComponent } from './admin/admin.component';
 import { UsuerService } from './usuer.service';
 import { NavBackendComponent } from './nav-backend/nav-backend.component';
+
+import { CategoriasComponent } from './categorias/categorias.component';
+import { CategoriasService } from './categorias.service';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -31,9 +36,13 @@ import { NavBackendComponent } from './nav-backend/nav-backend.component';
     FooterComponent,
     NavbarComponent,
     BackendComponent,
+
     BackendUsuarioComponent,
     AdminComponent,
     NavBackendComponent
+
+    CategoriasComponent
+
   ],
   imports: [
     BrowserModule,
@@ -44,7 +53,11 @@ import { NavBackendComponent } from './nav-backend/nav-backend.component';
     HttpClientModule,
     
  ],
+
   providers: [CuadernoTotoService, UsuerService],       //IMPORTAR LOS SERVICIOS
+
+  providers: [CuadernoTotoService,CategoriasService],       //IMPORTAR LOS SERVICIOS
+
   bootstrap: [AppComponent]
 })
 export class AppModule { }
