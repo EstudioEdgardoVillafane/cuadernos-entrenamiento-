@@ -1,0 +1,124 @@
+<app-nav-backend></app-nav-backend>
+<section class="pt-5 pb-5 my-5">
+    <div class="container mt-5">
+      <div class="row text-center">
+        <div class="offset-6 col-6">
+        
+          </div>
+        
+      </div>
+      <ng-template #other_content>
+        <div *ngIf="ette;else otr">
+        <div class="row text-center">
+          <div class="col-12">
+          <h2>Agregar nuevo usuario</h2>
+          <hr>
+        </div>
+        </div>
+      
+      <div class="row">
+        <div class="col-6">
+          <label>Nombre de Usuario</label>
+        </div>
+        <div class="col-6">
+          <input id="nombre" value="" placeholder="Nombre" class="form-control">
+        </div>
+        </div>
+        
+        <div class="row">
+          <div class="col-6">
+            <label>Contraseña</label>
+          </div>
+        <div class="col-6">
+          <input type="password "class="form-control mt-2" id="contrasena" value="" placeholder="Categoria">
+        </div>
+        </div>
+       
+      <div class="row mb-2 text-center">
+        <div class="col-12">
+          <hr>
+        </div>
+        </div>
+        <div class="row">
+          <div class="col-12">
+            <button class="pull-right btn btn-md btn-danger ml-1" (click)="Return()">Volver</button>
+            <button class="pull-right btn btn-md btn-primary" (click)="ShowIt()">Agregar</button>
+          </div>
+       </div>
+      </div>
+      <ng-template #otr>
+          <div class="row text-center">
+              <div class="col-12">
+              <h2>Editar usuario</h2>
+              <hr>
+            </div>
+            </div>
+          
+          <div class="row">
+            <div class="col-6">
+              <label>Nombre</label>
+            </div>
+            <div class="col-6">
+              <input id="nombre-ed" value="{{ListEdit.usuario}}" placeholder="Nombre" class="form-control">
+            </div>
+            </div>
+            
+            <div class="row">
+              <div class="col-6">
+                <label>Contraseña</label>
+              </div>
+            <div class="col-6">
+              <input class="form-control mt-2" id="contrasena-ed" value="{{ListEdit.contrasena}}" placeholder="Categoria">
+            </div>
+            </div>
+           
+          <div class="row mb-2 text-center">
+            <div class="col-12">
+              <hr>
+            </div>
+            </div>
+            <div class="row">
+              <div class="col-12">
+                <button class="pull-right btn btn-md btn-danger ml-1" (click)="Return()">Volver</button>
+                <button class="pull-right btn btn-md btn-primary" (click)="EditIt(ListEdit.id)">Editar</button>
+              </div>
+           </div>
+      </ng-template>
+      </ng-template>
+      <div *ngIf="ViewInsert;else other_content" class="mt-3">
+      <div class="row">
+        <div class="col-5">
+          <h2>Tabla de cuadernos.</h2>
+        </div>
+        <div class="col-7">
+          <button class="btn btn-md btn-primary pull-right ml-1" (click)="Show()">Agregar</button>
+          <button class="btn btn-md btn-danger pull-right" (click)="DeleteReg()">Eliminar</button>
+        </div>  
+      </div>
+         
+          <table class="table table-bordered mt-3"  width="100%">
+              <thead>
+                <tr>
+                  <th style="width: 1px;">#</th>
+                  <th>Usuario</th>
+                  <th>Contrasena</th>
+                  
+                  <th style="width: 25px">Editar</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let toto of listado"> 
+                  <td><input type="checkbox" class="tilde" value="{{toto.id}}" (click)="onDelete(toto.id)"></td>
+                  <td>{{toto.usuario}}</td>
+                  <td>{{toto.contrasena}}</td>
+                  <td>
+                    <button value="{{toto.id}}" (click)="ShowEd(toto.id)">
+                      <i class="fa fa-pencil"></i>
+                    </button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+      </div>
+    </div>
+  </section>
