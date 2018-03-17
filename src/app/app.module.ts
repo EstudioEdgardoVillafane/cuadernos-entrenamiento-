@@ -17,7 +17,8 @@ import { MitrabajoComponent } from './mitrabajo/mitrabajo.component';
 import { FooterComponent } from './footer/footer.component';
 import { CuadernoTotoService } from '../app/cuaderno-toto.service';
 import { BackendComponent } from './backend/backend.component';
-
+import { CategoriasComponent } from './categorias/categorias.component';
+import { CategoriasService } from './categorias.service';
 @NgModule({
   declarations: [
     AppComponent,
@@ -27,7 +28,8 @@ import { BackendComponent } from './backend/backend.component';
     MitrabajoComponent,
     FooterComponent,
     NavbarComponent,
-    BackendComponent
+    BackendComponent,
+    CategoriasComponent
   ],
   imports: [
     BrowserModule,
@@ -38,7 +40,7 @@ import { BackendComponent } from './backend/backend.component';
     HttpClientModule,
     
  ],
-  providers: [CuadernoTotoService],       //IMPORTAR LOS SERVICIOS
+  providers: [CuadernoTotoService,CategoriasService],       //IMPORTAR LOS SERVICIOS
   bootstrap: [AppComponent]
 })
 export class AppModule { }

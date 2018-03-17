@@ -1,5 +1,4 @@
 <?php
-
 	include 'cuaderno.php';
 	include 'connect.php';
 
