@@ -10,12 +10,11 @@ import { Cuaderno } from './productos/product-class';
 @Injectable()
 export class CategoriasService {
 
-
   constructor(private Http: Http) { }
   //Definimos como variable privada el HTTP, IMPORTANTE.
 
   Conect(Funct: number, id : number, categoriaproducto : number){
-    return this.Http.get('http://localhost/cuadernos/src/php/list-categorias.php?data='+Funct+'&id='+id+'&categoriaproducto='+categoriaproducto);
+    return this.Http.get('php/list-categorias.php?data='+Funct+'&id='+id+'&categoriaproducto='+categoriaproducto);
      //Devuelve el resultado del php como objeto.
   }
   getJsonID(id : number, json){

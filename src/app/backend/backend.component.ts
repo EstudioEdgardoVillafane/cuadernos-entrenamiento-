@@ -33,6 +33,7 @@ export class BackendComponent implements OnInit {
 
   ngOnInit() {
     this.Listar();
+   
   }
   EditIt(id : number){
     this.nombre = document.getElementById("nombre-ed");
@@ -69,6 +70,7 @@ export class BackendComponent implements OnInit {
   }
 
   onDelete(id : number){
+  
     this.Booleano=true;    
     console.log("Contador: " + this.NumberAux);
     if(this.NumberAux == 0){
@@ -103,6 +105,7 @@ export class BackendComponent implements OnInit {
         });
       }
     }
+    console.log(this.listado);
     this.Listar(); 
   }
 
@@ -113,13 +116,13 @@ export class BackendComponent implements OnInit {
     .subscribe(resultado => this.ListEdit = resultado);
  
   }
-
+Photo;
   ShowIt(){
     this.nombre = document.getElementById("nombre");
     this.categoria = document.getElementById("categoria");
     this.descripcion = document.getElementById("descripcion");
     this.precio = document.getElementById("precio");
-
+    this.Photo = document.getElementById("photo");
     this.totoService.Conect(
     3,
     0,
@@ -127,6 +130,7 @@ export class BackendComponent implements OnInit {
     this.descripcion.value,
     this.categoria.value,
     this.precio.value
+    // this.Photo
     )
     .subscribe((result) => { 
       this.lix = result;
@@ -135,5 +139,16 @@ export class BackendComponent implements OnInit {
 
     this.ViewInsert=true;
   }
- 
+
+  formElement;
+  request;
+
+  Enviar(){
+    console.log("intentado enviar algo");
+    this.formElement = document.getElementById("Formulario");
+    this.request = new XMLHttpRequest();
+    this.request.open("POST", "php/probando.php");
+    this.request.send(new FormData(this.formElement));
+    console.log(this.request); 
+  }
 }
