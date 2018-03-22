@@ -1,7 +1,6 @@
 <?php
 require_once 'cuaderno.php';
 require_once 'connect.php';
-
 $NewConnect = new Cuaderno();
 	
 	$Descripcion = $_POST["descripcion"];
