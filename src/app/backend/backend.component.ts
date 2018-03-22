@@ -149,6 +149,10 @@ Photo;
     this.request = new XMLHttpRequest();
     this.request.open("POST", "php/probando.php");
     this.request.send(new FormData(this.formElement));
-    console.log(this.request); 
+    console.log(this.request);
+    
+    this.Listar();
+
+    this.ViewInsert=true; 
   }
 }
