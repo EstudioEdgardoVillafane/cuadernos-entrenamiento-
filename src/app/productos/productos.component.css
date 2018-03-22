@@ -6,17 +6,25 @@ section{
     
     
 }
+
 img{
     transition: all 3s ease-in-out;
 }
 .thumb:hover {
     background-color: #d43076;
-  }
+}
 
 .text-styled{
     font-family: 'Kaushan Script', cursive;
     color:#a91f5a;
 }
-p{
+.palabra{
     color:#fb1478;
+}
+.card-body{
+    color:#a91f5a;    
+    background-color: #f785b685;
+}
+.precio{
+    color: #91003f;
 }
