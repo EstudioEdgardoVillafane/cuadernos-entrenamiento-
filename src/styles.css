@@ -1,7 +1,8 @@
 /* You can add global styles to this file, and also import other style files */
-@import url('https://fonts.googleapis.com/css?family=Kaushan+Script');
+@import url('https://fonts.googleapis.com/css?family=Caveat+Brush|Gochi+Hand|Mr+Bedfort|Philosopher|Rochester|Yesteryear');
+@import url('https://fonts.googleapis.com/css?family=Cagliostro');
 body{
     overflow-x: hidden;
-
+    font-family: 'Cagliostro', sans-serif;
 }
 

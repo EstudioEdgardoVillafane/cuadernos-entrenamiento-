@@ -5,4 +5,4 @@
 	define('PASSWORD', '');
 	define('DATABASE', 'cuaderno');
 
-?>
+?> 

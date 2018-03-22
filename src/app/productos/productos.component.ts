@@ -1,7 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-<<<<<<< HEAD
-// import { CommonModule } from '@angular/core';
-=======
 import { CommonModule } from '@angular/common';
 import { CuadernoTotoService } from './../cuaderno-toto.service';
 import 'rxjs/add/operator/map';
@@ -11,7 +8,6 @@ import { of } from 'rxjs/observable/of';
 import { catchError, map, tap } from 'rxjs/operators';
 import { Cuaderno } from './product-class';
 
->>>>>>> d6a3e062c583a22ceb91be56e77ee80062f14120
 @Component({
   selector: 'app-productos',
   templateUrl: './productos.component.html',

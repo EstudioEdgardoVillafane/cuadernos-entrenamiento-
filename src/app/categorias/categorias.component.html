@@ -1,0 +1,30 @@
+<br><br><br>
+<section>
+  <div class="row">
+    <div class="col-2"><button class="btn btn-lg  btn-info" (click)="Agregar()">Agregar</button></div>
+    <input placeholder="ingrese una categoria" class="form-control col-4" value="" type="text" id="CategoriaProducto">
+  </div>
+
+
+  <!--------------------------------TABLA-------------------------->
+
+  <table class="table table-bordered mt-3" >
+
+    <thead>
+      <tr>
+        <th>Categoria</th>
+        <th style="width: 25px">Eliminar</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr *ngFor="let toto of listado"> 
+        <td>{{toto.nombre}}</td>
+        <td>
+          <button (click)="DeleteReg(toto.id)"><i class="fa fa-trash"></i></button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+</section>

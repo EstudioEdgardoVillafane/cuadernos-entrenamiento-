@@ -1,5 +1,10 @@
-
-<carousel>
+<app-navbar></app-navbar>
+<section>
+  <div class="row">
+    <h1 class="col-md-12 text-styled mb-3">Mis cuadernos y Agendas</h1>
+    <p class="h4 ml-2 my-3">Disfrutá un rato mirando mis trabajos y novedades...</p>
+  </div>
+  <carousel>
     <slide>
       <img src="././assets/img/1.jpg" alt="First slide" style="display: block; width: 100%;">
     </slide>
@@ -10,72 +15,23 @@
       <img src="././assets/img/3.jpg" alt="Third slide" style="display: block; width: 100%;">
     </slide>
   </carousel>
-  
-  <section class="row">
-  <h1 class="col-md-12 text-styled mb-3">Mis cuadernos y Agendas</h1>
-  <p class="h4 ml-2 my-3">Disfrutá un rato mirando mis trabajos y novedades...</p>
-  <div class="row">
-    <div class="col-md-2 p-2 thumb">
-      <img src="assets/img/1.jpg" alt="" class="img-fluid">
-    </div>
-    <div class="col-md-2 p-2 thumb">
-      <img src="assets/img/2.jpg" alt="" class="img-fluid">
-    </div>
-    <div class="col-md-2 p-2 thumb">
-      <img src="assets/img/3.jpg" alt="" class="img-fluid">
-    </div>
-    <div class="col-md-2 p-2 thumb">
-      <img src="assets/img/4.jpg" alt="" class="img-fluid">
-    </div>
-    <div class="col-md-2 p-2 thumb">
-      <img src="assets/img/5.jpg" alt="" class="img-fluid">
-    </div>
-    <div class="col-md-2 p-2 thumb">
-      <img src="assets/img/6.jpg" alt="" class="img-fluid">
-    </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-4 mt-2" *ngFor="let toto of listado">
 
-    <div class="col-md-2 p-2 thumb">
-      <img src="assets/img/7.jpg" alt="" class="img-fluid">
-    </div>
-    <div class="col-md-2 p-2 thumb">
-      <img src="assets/img/8.jpg" alt="" class="img-fluid">
-    </div>
-    <div class="col-md-2 p-2 thumb">
-      <img src="assets/img/9.jpg" alt="" class="img-fluid">
-    </div>
-    <div class="col-md-2 p-2 thumb">
-      <img src="assets/img/10.jpg" alt="" class="img-fluid">
-    </div>
-    <div class="col-md-2 p-2 thumb">
-      <img src="assets/img/11.jpg" alt="" class="img-fluid">
-    </div>
-    <div class="col-md-2 p-2 thumb">
-      <img src="assets/img/12.jpg" alt="" class="img-fluid">
-    </div>
-    <div class="col-md-2 p-2 thumb">
-      <img src="assets/img/13.jpg" alt="" class="img-fluid">
-    </div>
-    <div class="col-md-2 p-2 thumb">
-      <img src="assets/img/14.jpg" alt="" class="img-fluid">
-    </div>
- </div>
- <ul>
-   <li *ngFor="let toto of listado">{{toto.nombre}}</li> 
+        <div class="card" style="width: 14rem; height:20rem;">
+          <img class="card-img-top" src="" alt="imagen del producto">
+          <div class="card-body">
+            <h5 class="card-title">{{toto.nombre}}</h5>
+            <h6 class="card-sucard-subtitle mb-2 text-muted">{{toto.precio}}</h6>
+            <p class="card-text">{{toto.descripcion}}</p>
+          </div>
+        </div>
 
- </ul>
+      </div>
+    </div>
+  </div>
 </section>
 
-
-<carousel>
-    <slide>
-      <img src="././assets/img/1.jpg" alt="First slide" style="display: block; width: 100%;">
-    </slide>
-    <slide>
-      <img src="././assets/img/2.jpg" alt="Second slide" style="display: block; width: 100%;">
-    </slide>
-    <slide>
-      <img src="././assets/img/3.jpg" alt="Third slide" style="display: block; width: 100%;">
-    </slide>
-  </carousel>
 
 

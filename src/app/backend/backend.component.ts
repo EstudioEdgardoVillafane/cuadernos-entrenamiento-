@@ -15,7 +15,7 @@ import { catchError, map, tap } from 'rxjs/operators';
 export class BackendComponent implements OnInit {
 
   constructor(private totoService: CuadernoTotoService) { }
-  
+   
   ette = true;
   listado;
   lix;
@@ -30,6 +30,7 @@ export class BackendComponent implements OnInit {
   categoria;
   ViewInsert = true;
   ListEdit;
+
   ngOnInit() {
     this.Listar();
   }
@@ -127,8 +128,8 @@ export class BackendComponent implements OnInit {
     this.categoria.value,
     this.precio.value
     )
-    .subscribe((data) => { 
-      this.lix = data;
+    .subscribe((result) => { 
+      this.lix = result;
     });
     this.Listar();
 

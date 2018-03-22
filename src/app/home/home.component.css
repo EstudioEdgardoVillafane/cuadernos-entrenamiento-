@@ -1,3 +1,4 @@
+
 #fondo{
     background-image: url("../../assets/img/bg1.jpg");
     background-position: center center;
@@ -8,10 +9,16 @@
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    color:white;
     text-shadow: 2px 2px 2px black;
 }
-.font-toto{
-    font-family: 'Kaushan Script', cursive;
-    text-shadow: 6px 2px 2px black;
+#fondo img{
+    filter: hue-rotate(453deg);
+}
+.title-large{
+    text-shadow: 6px 2px 2px rgb(53, 53, 53);
+    color: #fff28a;
+    /* text-shadow: 0 0 5px rgb(255, 255, 255); */
+    font-size: 3.2rem!important;
+    font-weight: 300;
+    font-family: 'Rochester', cursive;
 }
