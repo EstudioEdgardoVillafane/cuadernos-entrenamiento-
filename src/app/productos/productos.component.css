@@ -8,12 +8,13 @@ section{
     background-blend-mode: multiply;
     
 }
+
 img{
     transition: all 3s ease-in-out;
 }
 .thumb:hover {
     background-color: #d43076;
-  }
+ }
 carousel slide .item{
     height: 20%!important;
  
@@ -24,6 +25,13 @@ carousel slide .item{
     font-family: 'Cagliostro', sans-serif;
     color:#a91f5a;
 }
-p{
+.palabra{
     color:#fb1478;
+}
+.card-body{
+    color:#a91f5a;    
+    background-color: #f785b685;
+}
+.precio{
+    color: #91003f;
 }

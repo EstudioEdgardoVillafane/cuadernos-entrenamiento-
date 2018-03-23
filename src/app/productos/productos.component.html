@@ -17,15 +17,21 @@
   </carousel>
   <div class="container">
     <div class="row">
-      <div class="col-4 mt-2" *ngFor="let toto of listado">
 
-        <div class="card" style="width: 14rem; height:20rem;">
-          <img class="card-img-top" src="" alt="imagen del producto">
-          <div class="card-body">
-            <h5 class="card-title">{{toto.nombre}}</h5>
-            <h6 class="card-sucard-subtitle mb-2 text-muted">{{toto.precio}}</h6>
-            <p class="card-text">{{toto.descripcion}}</p>
-          </div>
+      <h1 class="col-md-12 text-styled mb-3">Mis cuadernos y Agendas</h1>
+      <p class="h4 ml-2 my-3 palabra">Disfrutá un rato mirando mis trabajos y novedades...</p>
+    </div>
+  
+<div class="container">
+  <div class="row">
+    <div class="col-3 mt-4" *ngFor="let toto of listado">
+      
+      <div class="card" style="width: 14rem; height:20rem;">
+        <img class="card-img-top" src="{{toto.foto}}" alt="imagen del producto">  
+        <div class="card-body">
+          <h4 class="card-title" align="center">{{toto.nombre}}</h4>
+          <p class="card-text descripcion" align="center">{{toto.descripcion}}</p>
+          <h6 class="card-sucard-subtitle mb-2  precio" align="center">$ {{toto.precio}}</h6>
         </div>
 
       </div>

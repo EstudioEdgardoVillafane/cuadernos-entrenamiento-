@@ -12,7 +12,7 @@ export class UsuerService {
   constructor(private Http : Http) {}
 
   Conect(Funct: number, id : number, name : string, contra : string){
-    return this.Http.get('http://localhost/cuadernos/src/php/user.php?data='+Funct+'&id='+id+"&name="+name+"&contra="+contra);
+    return this.Http.get('php/user.php?data='+Funct+'&id='+id+"&name="+name+"&contra="+contra);
      //Devuelve el resultado del php como objeto.
   }
   getJsonID(id : number, json){
