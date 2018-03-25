@@ -3,7 +3,7 @@ carousel{
 }
 section{
     padding: 30px 0;
-    background-image: url("assets/img/birds.jpg");
+    background-image: url("../../assets/img/birds.jpg");
     background-color:rgba(115, 68, 136, 0.65);
     background-blend-mode: multiply;
     
