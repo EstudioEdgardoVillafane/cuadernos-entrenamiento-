@@ -30,10 +30,12 @@ export class BackendComponent implements OnInit {
   categoria;
   ViewInsert = true;
   ListEdit;
+  list;
 
   ngOnInit() {
+    
     this.Listar();
-   
+   this.ListarCategoria(); 
   }
   EditIt(id : number){
     this.nombre = document.getElementById("nombre-ed");
@@ -56,6 +58,7 @@ export class BackendComponent implements OnInit {
   }
   Show(){
     this.ViewInsert = false;    
+    console.log(this.listado);
   }
   Return(){
     this.ViewInsert = true;
@@ -69,7 +72,11 @@ export class BackendComponent implements OnInit {
     });
   }
   ListarCategoria(){
-    
+    this.totoService.CategoriaList(1,0,0)
+      .map((response)=>response.json())
+      .subscribe((data)=>{
+      this.list=data;
+    })  
   }
 
   onDelete(id : number){

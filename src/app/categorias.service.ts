@@ -20,4 +20,7 @@ export class CategoriasService {
   getJsonID(id : number, json){
     return of(json.find(primero => primero.id === id));
   }    
+  CategoriaList(){
+    
+  }
 }

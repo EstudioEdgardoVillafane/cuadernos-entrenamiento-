@@ -33,7 +33,9 @@
           <label>Categoria</label>
         </div>
       <div class="col-6">
-        <input type="text" class="form-control mt-2" id="categoria" value="" name="categoria" placeholder="Categoria">
+        <select class="form-control mt-1" name="categoria">
+          <option *ngFor="let categoria of list" value="{{categoria.id}}">{{categoria.nombre}}</option>
+        </select>
       </div>
       </div>
       <div class="row"> 
@@ -94,10 +96,14 @@
           
           <div class="row">
             <div class="col-6">
-              <label>Categoria</label>
+              <section>
+                <option></option>
+              </section>
             </div>
           <div class="col-6">
-            <input class="form-control mt-2" id="categoria-ed" value="{{ListEdit.categoria}}" placeholder="Categoria">
+              <select class="form-control mt-1" name="categoria">
+                  <option *ngFor="let categoria of list" value="{{categoria.id}}">{{categoria.nombre}}</option>
+                </select>
           </div>
           </div>
           <div class="row"> 
