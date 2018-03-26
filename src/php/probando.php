@@ -24,5 +24,4 @@ $NewConnect = new Cuaderno();
         $NewConnect->ExecuteSql($sql);
 	
 
-
-?>
+ 
