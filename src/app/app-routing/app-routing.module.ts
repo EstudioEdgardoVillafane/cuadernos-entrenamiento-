@@ -12,6 +12,7 @@ import { AdminComponent } from '../admin/admin.component';
 import { BackendUsuarioComponent} from '../backend-usuario/backend-usuario.component';
 
 import { CategoriasComponent } from '../categorias/categorias.component';
+import {BackendContactoComponent}from '../backend-contacto/backend-contacto.component';
 
 
 const routes: Routes = [
@@ -23,7 +24,8 @@ const routes: Routes = [
   { path: 'admin', component: AdminComponent},
   { path: 'bac-productos', component: BackendComponent },
   { path: 'user', component: BackendUsuarioComponent },
-  { path: 'categorias',component: CategoriasComponent}
+  {path:'contacto', component: BackendContactoComponent},
+  { path: 'categoria',component: CategoriasComponent}
 
 ];
 
