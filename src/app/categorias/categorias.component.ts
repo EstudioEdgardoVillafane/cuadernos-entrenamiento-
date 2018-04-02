@@ -18,21 +18,56 @@ export class CategoriasComponent implements OnInit {
   listado;
   ViewInsert=true;
   i;
+  ette = true;
+  ListEdit;
+  categoria;
+  Booleano = true;
+  NumberAux = 0;
+  CheckAcumulador = new Array();
+
   constructor(private CategoriasServices:CategoriasService) { }
 
   ngOnInit() {
     this.Listar();
   }
   
-  DeleteReg(id:number){
-    if(id == undefined){
-      console.log("Indefinido");
+  onDelete(id : number){
+  
+    this.Booleano=true;    
+    console.log("Contador: " + this.NumberAux);
+    if(this.NumberAux == 0){
+      this.CheckAcumulador[0] = id;
+      this.NumberAux++;
+      console.log("Primer numero en la lista: " + id)
     }else{
-      this.CategoriasServices.Conect(2,id,0)
-      .subscribe((data) => { 
-        this.lix = data;
-      });
+      for(this.i = 0; this.i<this.NumberAux ; this.i++){
+        if(id == this.CheckAcumulador[this.i]){
+          this.CheckAcumulador.splice(this.i, 1);
+          this.Booleano = false;
+          console.log("El numero: " + id + " está en la posicion: " + this.i);
+          this.NumberAux++;
+        }
+      }
+      if(this.Booleano){
+          this.CheckAcumulador[this.NumberAux] = id;
+          console.log("Se agrego en el numero: " + id + ", en la posicion: " + this.NumberAux);
+          this.NumberAux++;
+        }
+      }
     }
+  
+  DeleteReg(){
+    for(this.i=0; this.i<this.NumberAux; this.i++){
+      if(this.CheckAcumulador[this.i] == undefined){
+        console.log("Indefinido");
+      }else{
+        this.CategoriasServices.Conect(2, this.CheckAcumulador[this.i],0)
+        .subscribe((data) => { 
+          this.lix = data;
+        });
+      }
+    }
+    console.log(this.listado);
     this.Listar(); 
   }
   
@@ -59,6 +94,34 @@ export class CategoriasComponent implements OnInit {
     this.Listar();
 
     this.ViewInsert=true;
+  }
+  Edit(id : number){
+    this.ette = false;
+    this.ViewInsert=false;
+    this.CategoriasServices.getJsonID(id,this.listado)
+    .subscribe(resultado => this.ListEdit = resultado);
+  
+  }
+  Show(){
+    this.ViewInsert = false;    
+  }
+  Return(){
+    this.ViewInsert = true;
+    this.ette = true;
+  }
+
+  EditIt(id : number){
+    this.CategoriaProducto = document.getElementById("ed-categoria");
+
+    this.CategoriasServices.Conect(
+    4,
+    id,
+    this.CategoriaProducto.value
+    )
+    .subscribe((data) => { 
+      this.lix = data;
+    });
+    this.Listar();
   }
 }
 

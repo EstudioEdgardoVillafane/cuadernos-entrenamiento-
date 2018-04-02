@@ -1,33 +1,30 @@
 #formu{
     width:100%;
-  
     background-attachment: fixed;
-  
-    background-image: url("assets/img/birds.jpg");
+    background-image: url("../../assets/img/birds.jpg");
     background-repeat: repeat;
-    background-color: rgb(240, 121, 220);
-    background-blend-mode: screen;
+    background-color:rgba(115, 68, 136, 0.65);
+    background-blend-mode: multiply;
+    height: 100vh;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    color:black;
-   
-
-
+    color: #fff;
 }
 .formulario{
-    float: left;
-
-
+    padding: 0 80px 0 0;
 }
-
-.logo{
-    float: left;
-
-
+.formulario img{
+    filter: invert(100%);
 }
- .rosa{
-    font-family: 'Kaushan Script', cursive;
-    color:#a91f5a;
+ .letrero{
+    color:#F1D18A;
+ }
+  .letrero img{
+    filter: hue-rotate(453deg);
+ }
+ 
+ .formulario .btn{
+     background-color:#148798!important;
  }

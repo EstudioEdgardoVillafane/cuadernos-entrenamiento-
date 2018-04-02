@@ -8,8 +8,11 @@
       
     </div>
     <ng-template #other_content>
+       
+
       <div *ngIf="ette;else otr">
-      <div class="row text-center">
+          <form action="probando.php" method="post" id="Formulario" enctype="multipart/form-data">
+        <div class="row text-center">
         <div class="col-12">
         <h2>Agregar nuevo cuaderno</h2>
         <hr>
@@ -21,7 +24,7 @@
         <label>Nombre</label>
       </div>
       <div class="col-6">
-        <input id="nombre" value="" placeholder="Nombre" class="form-control">
+        <input type="text" id="nombre" placeholder="Nombre" name="nombre" class="form-control">
       </div>
       </div>
       
@@ -30,7 +33,7 @@
           <label>Categoria</label>
         </div>
       <div class="col-6">
-        <input class="form-control mt-2" id="categoria" value="" placeholder="Categoria">
+        <input type="text" class="form-control mt-2" id="categoria" value="" name="categoria" placeholder="Categoria">
       </div>
       </div>
       <div class="row"> 
@@ -38,7 +41,7 @@
           <label>Precio</label>
         </div>
       <div class="col-6">   
-        <input id="precio" value="" class="mt-2 form-control" placeholder="Precio">
+        <input type="text" id="precio" value="" class="mt-2 form-control" name="precio" placeholder="Precio">
       </div>
     </div>
     <div class="row">
@@ -46,9 +49,17 @@
           <label>Descripcion</label>
         </div>
         <div class="col-6">
-          <textarea id="descripcion" value="" placeholder="Descripcion" class="mt-2 form-control"></textarea>
+          <textarea id="descripcion" value="" placeholder="Descripcion" name="descripcion" class="mt-2 form-control"></textarea>
         </div>
         </div>
+        <div class="row">
+          <div class="col-6">
+            <label>Subir imagen</label>
+          </div>
+          <div class="col-6">
+            <input type="file" name="uploadedfile" class="mt-2 form-control">
+          </div>
+          </div>
     <div class="row mb-2 text-center">
       <div class="col-12">
         <hr>
@@ -56,11 +67,14 @@
       </div>
       <div class="row">
         <div class="col-12">
-          <button class="pull-right btn btn-md btn-danger ml-1" (click)="Return()">Volver</button>
-          <button class="pull-right btn btn-md btn-primary" (click)="ShowIt()">Agregar</button>
+          <input (click)="Enviar()" type="submit" value="Agregar" class="pull-right btn btn-md btn-primary ml-1">
+          <input type="button" class="pull-right btn btn-md btn-danger ml-1" (click)="Return()" value="Volver">
         </div>
-     </div>
-    </div>
+      </div>
+    </form>
+      </div>
+    
+
     <ng-template #otr>
         <div class="row text-center">
             <div class="col-12">
@@ -134,6 +148,7 @@
                 <th>Descripción</th>
                 <th>Categoria</th>
                 <th>Precio</th>
+                <th>Foto</th>
                 <th style="width: 25px">Editar</th>
               </tr>
             </thead>
@@ -144,6 +159,7 @@
                 <td>{{toto.descripcion}}</td>
                 <td>{{toto.categoria}}</td>
                 <td>{{toto.precio}}</td>
+                <td><img src="{{toto.foto}}" style="max-width: 15%"></td>
                 <td>
                   <button value="{{toto.id}}" (click)="ShowEd(toto.id)">
                     <i class="fa fa-pencil"></i>

@@ -1,11 +1,30 @@
 <app-nav-backend></app-nav-backend>
+
 <br><br><br>
 <section>
-  <div class="row">
-    <div class="col-2"><button class="btn btn-lg  btn-info" (click)="Agregar()">Agregar</button></div>
-    <input placeholder="ingrese una categoria" class="form-control col-4" value="" type="text" id="CategoriaProducto">
+  <ng-template #otr>
+<h2 align="center">Editar Categoria</h2>
+  <div class="container ">
+    <div class="row">
+      <div class="col-2"><button class="btn btn-lg btn-danger" (click)="Return()">Volver</button></div>
+      <div class="col-2"><button class="btn btn-lg btn-info" (click)="EditIt(ListEdit.id)">Editar</button></div>
+      <input  id="ed-categoria" value="{{ListEdit.nombre}}" placeholder="Editar Categoria" class="form-control col-4">
+    </div>
   </div>
+  </ng-template>
 
+  <div *ngIf="ViewInsert;else otr">
+
+  <h2 align="center">Agregar Categoria</h2>
+    <div class="container">
+      <div class="row">
+        <div class="col-2"><button class="btn btn-lg btn-danger" (click)="DeleteReg()">Eliminar</button></div>
+        <div class="col-2"><button class="btn btn-lg  btn-info" (click)="Agregar()">Agregar</button></div>
+        <input placeholder="ingrese una categoria" class="form-control col-4" value="" type="text" id="CategoriaProducto">
+      </div>
+    </div>
+    
+  </div>
 
   <!--------------------------------TABLA-------------------------->
 
@@ -13,19 +32,18 @@
 
     <thead>
       <tr>
+        <th style="width: 1px;">#</th>
         <th>Categoria</th>
-        <th style="width: 25px">Eliminar</th>
+        <th style="width: 25px">Editar</th>
       </tr>
     </thead>
 
     <tbody>
-      <tr *ngFor="let toto of listado"> 
+      <tr *ngFor="let toto of listado">
+        <td><input type="checkbox" class="tilde" value="{{toto.id}}" (click)="onDelete(toto.id)"></td> 
         <td>{{toto.nombre}}</td>
-        <td>
-          <button (click)="DeleteReg(toto.id)"><i class="fa fa-trash"></i></button>
-        </td>
+        <td><button (click)="Edit(toto.id)"><i class="fa fa-pencil"></i></button></td>
       </tr>
     </tbody>
   </table>
-
 </section>

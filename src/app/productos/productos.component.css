@@ -1,22 +1,37 @@
+carousel{
+
+}
 section{
-    padding: 65px 65px;
-    background-image: url("assets/img/birds.jpg");
-    background-color: rgb(240, 121, 220);
-    background-blend-mode: screen;
-    
+    padding: 30px 0;
+    background-image: url("../../assets/img/birds.jpg");
+    background-color:rgba(115, 68, 136, 0.65);
+    background-blend-mode: multiply;
     
 }
+
 img{
     transition: all 3s ease-in-out;
 }
 .thumb:hover {
     background-color: #d43076;
-  }
-
+ }
+carousel slide .item{
+    height: 20%!important;
+ 
+}
 .text-styled{
     font-family: 'Kaushan Script', cursive;
+    font-family: 'Rochester', cursive;
+    font-family: 'Cagliostro', sans-serif;
     color:#a91f5a;
 }
-p{
+.palabra{
     color:#fb1478;
+}
+.card-body{
+    color:#a91f5a;    
+    background-color: #f785b685;
+}
+.precio{
+    color: #91003f;
 }
