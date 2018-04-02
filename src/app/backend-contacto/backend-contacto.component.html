@@ -1,0 +1,99 @@
+<app-nav-backend></app-nav-backend>
+<section class="pt-5 pb-5 my-5">
+    <div class="container mt-5">
+      <div class="row text-center">
+        <div class="offset-6 col-6">
+        
+          </div>
+        
+      </div>
+      <ng-template #other_content>
+       
+          
+            <div class="row text-center">
+                <div class="col-12">
+                <h2>Contacto</h2>
+                <hr>
+              </div>
+              </div>
+            
+           
+              <div class="row">
+                <div class="col-6">
+                  <label>Nombre</label>
+                </div>
+              <div class="col-6">
+                <input class="form-control mt-2" id="nombre-ed" value="{{ListEdit.nombre}}" placeholder="nombre"/>
+              </div>
+              </div>
+             
+              
+              
+              <div class="row">
+                <div class="col-6">
+                  <label>Respuesta</label>
+                </div>
+              <div class="col-6">
+                <textarea class="form-control mt-2" id="respuesta-ed" value="{{ListEdit.respuesta}}" placeholder="respuesta"></textarea>
+              </div>
+              </div>
+             
+            <div class="row mb-2 text-center">
+              <div class="col-12">
+                <hr>
+              </div>
+              </div>
+              <div class="row">
+                <div class="col-12">
+                  <button class="pull-right btn btn-md btn-danger ml-1" (click)="Return()">Volver</button>
+                  <button class="pull-right btn btn-md btn-primary" (click)="Editarcontacto(ListEdit.id)">Editar</button>
+                </div>
+             </div>
+            
+        </ng-template>
+        
+        
+     
+    
+      <div *ngIf="ViewInsert;else other_content" class="mt-3">
+      <div class="row">
+        <div class="col-5">
+          <h2>Tabla de Contactos.</h2>
+        </div>
+         
+      </div>
+         
+          <table class="table table-bordered mt-3"  width="100%">
+              <thead>
+                <tr>
+                  <th style="width: 1px;">#</th>
+                  <th>Nombre</th>
+                  <th>Telefono</th>                 
+                  <th>Email</th>
+                  <th>Mensaje</th>
+                  <th>Respuesta</th>
+                  
+                  <th style="width: 25px">Editar</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let dami of listado"> 
+                  <td><input type="checkbox" class="tilde" value="{{dami.id}}" (click)="onDelete(dami.id)"></td>
+                  <td>{{dami.nombre}}</td>
+                  <td>{{dami.telefono}}</td>
+                  <td>{{dami.email}}</td>
+                  <td>{{dami.mensaje}}</td>
+                  <td>{{dami.respuesta}}</td>
+                  
+                  
+                  <td>
+                    <button value="{{dami.id}}" (click)="ShowEd(dami.id)">
+                      <i class="fa fa-pencil"></i>
+                    </button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+      </div>
+    </div>
+  </section>

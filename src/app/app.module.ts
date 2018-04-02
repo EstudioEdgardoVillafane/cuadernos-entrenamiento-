@@ -28,7 +28,8 @@ import { NavBackendComponent } from './nav-backend/nav-backend.component';
 // import { RouterModule, Routes } from '@angular/router';
 import { CategoriasComponent } from './categorias/categorias.component';
 import { CategoriasService } from './categorias.service';
-
+import { ContactoService } from './contacto.service';
+import { BackendContactoComponent } from './backend-contacto/backend-contacto.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -44,7 +45,9 @@ import { CategoriasService } from './categorias.service';
     AdminComponent,
     NavBackendComponent,
 
-    CategoriasComponent
+    CategoriasComponent,
+
+    BackendContactoComponent
 
   ],
   imports: [
@@ -56,7 +59,7 @@ import { CategoriasService } from './categorias.service';
     HttpClientModule
  ],
 
-  providers: [CuadernoTotoService, UsuerService, CategoriasService],       //IMPORTAR LOS SERVICIOS
+  providers: [CuadernoTotoService, UsuerService, CategoriasService,ContactoService],       //IMPORTAR LOS SERVICIOS
 
   bootstrap: [AppComponent]
 })
