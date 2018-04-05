@@ -1,37 +1,60 @@
-carousel{
 
-}
-section{
-    padding: 30px 0;
-    background-image: url("../../assets/img/birds.jpg");
+.wrapper{
+    background-image: url("../../assets/img/fondo.jpg");
     background-color:rgba(115, 68, 136, 0.65);
     background-blend-mode: multiply;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    -o-background-size: contain;
+    background-size: contain;
+    height:100vh ;
+    overflow: scroll;
     
 }
-
+#slide{
+    height:34rem!important;
+}
+carousel img{
+   background-size: contain;
+   background-position: center center;
+}
 img{
     transition: all 3s ease-in-out;
 }
 .thumb:hover {
     background-color: #d43076;
  }
-carousel slide .item{
-    height: 20%!important;
- 
-}
+
 .text-styled{
-    font-family: 'Kaushan Script', cursive;
-    font-family: 'Rochester', cursive;
-    font-family: 'Cagliostro', sans-serif;
-    color:#a91f5a;
+    
+    color: #fff28a;
+    /* text-shadow: 0 0 5px rgb(255, 255, 255); */
+    font-size: 3.8rem!important;
+    font-weight: 300;
 }
 .palabra{
     color:#fb1478;
 }
 .card-body{
-    color:#a91f5a;    
-    background-color: #f785b685;
+  
+    color: #444444!important;
+    
+}
+.card{
+      background-color: #fff8c2;
 }
 .precio{
-    color: #91003f;
+   
+    font-size: 1.7rem;
+}
+
+h3{
+    color: #fff;
+    font-size: 1.75rem;
+}
+/* Rules for mobiles */
+@media screen and (max-width:425px) {
+    #slide{
+        height:16rem!important;
+    }
 }

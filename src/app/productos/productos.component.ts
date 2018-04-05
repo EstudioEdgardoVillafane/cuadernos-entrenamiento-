@@ -17,7 +17,6 @@ export class ProductosComponent implements OnInit {
 
     listado;  //Definimos la variable que se va a usar para guardar el JSON.
 
-
   constructor( private totoService: CuadernoTotoService) { }
   //Definimos el servicio en forma privada MUY IMPORTANTE.
 

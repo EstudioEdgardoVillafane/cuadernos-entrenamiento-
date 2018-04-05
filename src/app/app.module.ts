@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { AppRoutingModule } from './app-routing/app-routing.module';
+import { AppRoutingModule } from './app-routing.module';
 import { FormsModule }    from '@angular/forms';
 
 //import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
@@ -25,7 +25,7 @@ import { BackendUsuarioComponent } from './backend-usuario/backend-usuario.compo
 import { AdminComponent } from './admin/admin.component';
 import { UsuerService } from './usuer.service';
 import { NavBackendComponent } from './nav-backend/nav-backend.component';
-
+// import { RouterModule, Routes } from '@angular/router';
 import { CategoriasComponent } from './categorias/categorias.component';
 import { CategoriasService } from './categorias.service';
 
@@ -53,8 +53,7 @@ import { CategoriasService } from './categorias.service';
     AppRoutingModule,
     FormsModule,
     CarouselModule.forRoot(),
-    HttpClientModule,
-    
+    HttpClientModule
  ],
 
   providers: [CuadernoTotoService, UsuerService, CategoriasService],       //IMPORTAR LOS SERVICIOS

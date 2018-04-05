@@ -68,6 +68,9 @@ export class BackendComponent implements OnInit {
       this.listado = data;
     });
   }
+  ListarCategoria(){
+    
+  }
 
   onDelete(id : number){
   
