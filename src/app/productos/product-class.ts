@@ -5,5 +5,5 @@ export class Cuaderno {
     precio:string;
     categoria:number;
     foto:string;
-    status:number;
+    // status:number;
   }
