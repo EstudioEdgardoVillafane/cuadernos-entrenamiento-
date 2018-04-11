@@ -54,7 +54,7 @@ export class BackendComponent implements OnInit {
     .subscribe((data) => { 
       this.lix = data;
     });
-    this.Listar();
+    location.reload();
   }
   Show(){
     this.ViewInsert = false;    
@@ -115,8 +115,8 @@ export class BackendComponent implements OnInit {
         });
       }
     }
-    console.log(this.listado);
-    this.Listar(); 
+    location.reload();
+
   }
 
   ShowEd(id : number){
@@ -140,14 +140,13 @@ Photo;
     this.descripcion.value,
     this.categoria.value,
     this.precio.value
-    // this.Photo
+   
     )
     .subscribe((result) => { 
       this.lix = result;
     });
-    this.Listar();
+    location.reload();
 
-    this.ViewInsert=true;
   }
 
   formElement;
@@ -159,10 +158,7 @@ Photo;
     this.request = new XMLHttpRequest();
     this.request.open("POST", "php/probando.php");
     this.request.send(new FormData(this.formElement));
-    console.log(this.request);
-    
-    this.Listar();
+    location.reload();
 
-    this.ViewInsert=true; 
   }
 }

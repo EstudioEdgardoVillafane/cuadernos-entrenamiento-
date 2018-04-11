@@ -67,8 +67,8 @@ export class CategoriasComponent implements OnInit {
         });
       }
     }
-    console.log(this.listado);
-    this.Listar(); 
+    location.reload();
+
   }
   
     
@@ -91,9 +91,8 @@ export class CategoriasComponent implements OnInit {
     .subscribe((data) => { 
       this.lix = data;
     });
-    this.Listar();
+    location.reload();
 
-    this.ViewInsert=true;
   }
   Edit(id : number){
     this.ette = false;
@@ -121,7 +120,8 @@ export class CategoriasComponent implements OnInit {
     .subscribe((data) => { 
       this.lix = data;
     });
-    this.Listar();
+    location.reload();
+
   }
 }
 

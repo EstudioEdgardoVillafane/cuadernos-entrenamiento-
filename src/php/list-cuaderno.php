@@ -5,7 +5,7 @@
 	$NewConnect = new Cuaderno();
 	
 	if($_GET["data"]==1){
-		$sql="SELECT b.id,b.nombre,a.id,a.nombre,a.descripcion,a.precio,a.categoria,a.foto,a.status FROM producto a, categoria b WHERE a.status = 1 AND a.categoria=b.id";	
+		$sql="SELECT b.id,b.c_categoria,a.id,a.nombre,a.descripcion,a.precio,a.categoria,a.foto,a.status FROM producto a, categoria b WHERE a.status = 1 AND a.categoria=b.id";	
 		$NewConnect->CreateJson($sql);
 	}elseif($_GET["data"]==2){
 		$sqld = "UPDATE producto SET status = 0 WHERE id = '".$_GET["id"]."'";

@@ -24,7 +24,7 @@ const routes: Routes = [
   { path: 'admin', component: AdminComponent},
   { path: 'bac-productos', component: BackendComponent },
   { path: 'user', component: BackendUsuarioComponent },
-  {path:'contacto', component: BackendContactoComponent},
+  { path:'contacto', component: BackendContactoComponent},
   { path: 'categoria',component: CategoriasComponent}
 
 ];

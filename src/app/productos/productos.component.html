@@ -1,46 +1,35 @@
-<app-navbar></app-navbar>
-<section>
-  <div class="row">
-    <h1 class="col-md-12 text-styled mb-3">Mis cuadernos y Agendas</h1>
-    <p class="h4 ml-2 my-3">Disfrutá un rato mirando mis trabajos y novedades...</p>
-  </div>
-  <carousel>
-    <slide>
-      <img src="././assets/img/1.jpg" alt="First slide" style="display: block; width: 100%;">
-    </slide>
-    <slide>
-      <img src="././assets/img/2.jpg" alt="Second slide" style="display: block; width: 100%;">
-    </slide>
-    <slide>
-      <img src="././assets/img/3.jpg" alt="Third slide" style="display: block; width: 100%;">
-    </slide>
-  </carousel>
-  <div class="container">
-    <div class="row">
-
-      <h1 class="col-md-12 text-styled mb-3">Mis cuadernos y Agendas</h1>
-      <p class="h4 ml-2 my-3 palabra">Disfrutá un rato mirando mis trabajos y novedades...</p>
+<div class="wrapper">
+  <app-navbar></app-navbar>
+  <div class="container-fluid">
+    <div class="row ">
+      <h1 class="col-md-12 text-styled mt-3 text-center">Mis cuadernos y Agendas</h1>
+      <h3 class="h4 ml-3 mb-3 text-center">Disfrutá un rato mirando mis trabajos y novedades...</h3>
     </div>
-    </div>
-  
-<div class="container">
-  <div class="row">
-    <div class="col-3 mt-4" *ngFor="let toto of listado">
-      
-      <div class="card" style="width: 14rem; height:20rem;">
-        <img class="card-img-top" src="{{toto.foto}}" alt="imagen del producto">  
-        <div class="card-body">
-          <h4 class="card-title" align="center">{{toto.nombre}}</h4>
-          <p class="card-text descripcion" align="center">{{toto.descripcion}}</p>
-          <h6 class="card-sucard-subtitle mb-2  precio" align="center">$ {{toto.precio}}</h6>
+    <carousel>
+      <slide id="slide">
+        <img src="././assets/img/1.jpg" alt="First slide" class="d-block img-fluid">
+      </slide>
+      <slide style="height:450px;">
+        <img src="././assets/img/2.jpg" alt="Second slide" class="d-block img-fluid">
+      </slide>
+      <slide style="height:450px;">
+        <img src="././assets/img/3.jpg" alt="Third slide" class="d-block img-fluid">
+      </slide>
+    </carousel>
+    <div class="container">
+      <div class="row">
+        <div class="col-3 mt-4" *ngFor="let toto of listado">
+          <div class="card" style="width: 14rem; height:20rem;">
+            <img class="card-img-top" src="{{toto.foto}}" alt="imagen del producto">
+            <div class="card-body">
+              <h4 class="card-title" align="center">{{toto.nombre}}</h4>
+              <p class="card-text descripcion" align="center">{{toto.descripcion}}</p>
+              <h6 class="card-sucard-subtitle mb-2  precio" align="center">$ {{toto.precio}}</h6>
+            </div>
+          </div>
         </div>
       </div>
-
     </div>
   </div>
 </div>
-
-</section>
-
-
-
+  

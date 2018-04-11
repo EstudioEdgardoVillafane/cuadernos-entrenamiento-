@@ -8,7 +8,7 @@
     <div class="row">
       <div class="col-2"><button class="btn btn-lg btn-danger" (click)="Return()">Volver</button></div>
       <div class="col-2"><button class="btn btn-lg btn-info" (click)="EditIt(ListEdit.id)">Editar</button></div>
-      <input  id="ed-categoria" value="{{ListEdit.nombre}}" placeholder="Editar Categoria" class="form-control col-4">
+      <input  id="ed-categoria" value="{{ListEdit.c_categoria}}" placeholder="Editar Categoria" class="form-control col-4">
     </div>
   </div>
   </ng-template>
@@ -27,7 +27,10 @@
   </div>
 
   <!--------------------------------TABLA-------------------------->
+<div class="container">
+  <div class="row">
 
+  
   <table class="table table-bordered mt-3" >
 
     <thead>
@@ -41,9 +44,11 @@
     <tbody>
       <tr *ngFor="let toto of listado">
         <td><input type="checkbox" class="tilde" value="{{toto.id}}" (click)="onDelete(toto.id)"></td> 
-        <td>{{toto.nombre}}</td>
+        <td>{{toto.c_categoria}}</td>
         <td><button (click)="Edit(toto.id)"><i class="fa fa-pencil"></i></button></td>
       </tr>
     </tbody>
   </table>
+</div>
+</div>
 </section>

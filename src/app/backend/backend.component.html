@@ -20,10 +20,12 @@
       </div>
     
     <div class="row">
+        
       <div class="col-6">
         <label>Nombre</label>
       </div>
       <div class="col-6">
+          
         <input type="text" id="nombre" placeholder="Nombre" name="nombre" class="form-control">
       </div>
       </div>
@@ -34,19 +36,25 @@
         </div>
       <div class="col-6">
         <select class="form-control mt-1" name="categoria">
-          <option *ngFor="let categoria of list" value="{{categoria.id}}">{{categoria.nombre}}</option>
+          <option *ngFor="let categoria of list" value="{{categoria.id}}">{{categoria.c_categoria}}</option>
         </select>
       </div>
       </div>
       <div class="row"> 
         <div class="col-6">
           <label>Precio</label>
+        
         </div>
-      <div class="col-6">   
-        <input type="text" id="precio" value="" class="mt-2 form-control" name="precio" placeholder="Precio">
+      <div class="col-6 mt-2">
+        <div class="input-group">   
+          <div class="input-group-prepend">
+              <div class="input-group-text">$</div>
+            </div>
+        <input type="text" id="precio" value="" class=" form-control" name="precio" placeholder="Precio">
       </div>
     </div>
-    <div class="row">
+  </div>
+      <div class="row">
         <div class="col-6">
           <label>Descripcion</label>
         </div>
@@ -131,6 +139,7 @@
             <div class="col-12">
               <button class="pull-right btn btn-md btn-danger ml-1" (click)="Return()">Volver</button>
               <button class="pull-right btn btn-md btn-primary" (click)="EditIt(ListEdit.id)">Editar</button>
+
             </div>
          </div>
     </ng-template>
@@ -141,8 +150,9 @@
         <h2>Tabla de cuadernos.</h2>
       </div>
       <div class="col-7">
-        <button class="btn btn-md btn-primary pull-right ml-1" (click)="Show()">Agregar</button>
-        <button class="btn btn-md btn-danger pull-right" (click)="DeleteReg()">Eliminar</button>
+        <button class="btn btn-md btn-danger pull-right ml-1" (click)="DeleteReg()">Eliminar</button>
+        <button class="btn btn-md btn-primary pull-right" (click)="Show()">Agregar</button>
+
       </div>  
     </div>
        
@@ -154,7 +164,7 @@
                 <th>Descripción</th>
                 <th>Categoria</th>
                 <th>Precio</th>
-                <th>Foto</th>
+                <th style="width:110px">Foto</th>
                 <th style="width: 25px">Editar</th>
               </tr>
             </thead>
@@ -163,9 +173,9 @@
                 <td><input type="checkbox" class="tilde" value="{{toto.id}}" (click)="onDelete(toto.id)"></td>
                 <td>{{toto.nombre}}</td>
                 <td>{{toto.descripcion}}</td>
-                <td>{{toto.categoria}}</td>
-                <td>{{toto.precio}}</td>
-                <td><img src="{{toto.foto}}" style="max-width: 15%"></td>
+                <td>{{toto.c_categoria}}</td>
+                <td>${{toto.precio}}</td>
+                <td style="height: 85px;"><img src="{{toto.foto}}" style="max-height: 100%"></td>
                 <td>
                   <button value="{{toto.id}}" (click)="ShowEd(toto.id)">
                     <i class="fa fa-pencil"></i>
