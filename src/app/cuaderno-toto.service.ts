@@ -18,6 +18,10 @@ export class CuadernoTotoService {
     return this.Http.get('php/list-cuaderno.php?data='+Funct+'&id='+id+"&name="+name+"&desc="+desc+"&categ="+categ+"&precio="+precio);
      //Devuelve el resultado del php como objeto.
   }
+  CategoriaList(Funct: number, id : number, categoriaproducto : number){
+    return this.Http.get('php/list-categorias.php?data='+Funct+'&id='+id+'&categoriaproducto='+categoriaproducto);
+     //Devuelve el resultado del php como objeto.
+  }
   getJsonID(id : number, json){
     return of(json.find(primero => primero.id === id));
   }    

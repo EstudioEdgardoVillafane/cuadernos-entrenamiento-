@@ -30,10 +30,12 @@ export class BackendComponent implements OnInit {
   categoria;
   ViewInsert = true;
   ListEdit;
+  list;
 
   ngOnInit() {
+    
     this.Listar();
-   
+   this.ListarCategoria(); 
   }
   EditIt(id : number){
     this.nombre = document.getElementById("nombre-ed");
@@ -52,10 +54,11 @@ export class BackendComponent implements OnInit {
     .subscribe((data) => { 
       this.lix = data;
     });
-    this.Listar();
+    location.reload();
   }
   Show(){
     this.ViewInsert = false;    
+    console.log(this.listado);
   }
   Return(){
     this.ViewInsert = true;
@@ -69,7 +72,11 @@ export class BackendComponent implements OnInit {
     });
   }
   ListarCategoria(){
-    
+    this.totoService.CategoriaList(1,0,0)
+      .map((response)=>response.json())
+      .subscribe((data)=>{
+      this.list=data;
+    })  
   }
 
   onDelete(id : number){
@@ -108,8 +115,8 @@ export class BackendComponent implements OnInit {
         });
       }
     }
-    console.log(this.listado);
-    this.Listar(); 
+    location.reload();
+
   }
 
   ShowEd(id : number){
@@ -133,14 +140,13 @@ Photo;
     this.descripcion.value,
     this.categoria.value,
     this.precio.value
-    // this.Photo
+   
     )
     .subscribe((result) => { 
       this.lix = result;
     });
-    this.Listar();
+    location.reload();
 
-    this.ViewInsert=true;
   }
 
   formElement;
@@ -152,10 +158,7 @@ Photo;
     this.request = new XMLHttpRequest();
     this.request.open("POST", "php/probando.php");
     this.request.send(new FormData(this.formElement));
-    console.log(this.request);
-    
-    this.Listar();
+    location.reload();
 
-    this.ViewInsert=true; 
   }
 }

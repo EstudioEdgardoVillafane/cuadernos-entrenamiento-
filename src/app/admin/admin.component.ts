@@ -34,7 +34,7 @@ export class AdminComponent implements OnInit {
     }else{
       if(this.contra.value == this.AuxOnline.contrasena){
         this.UserOnline = false;
-        location.href="user";
+        location.href="bac-productos";
       }else{
         console.log("Datos erroneos, mal");
       }

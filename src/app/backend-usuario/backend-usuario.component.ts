@@ -46,7 +46,7 @@ export class BackendUsuarioComponent implements OnInit {
       .subscribe((data) => { 
         this.lix = data;
       });
-      this.Listar();
+      location.reload();
     }
     Show(){
       this.ViewInsert = false;    
@@ -98,7 +98,7 @@ export class BackendUsuarioComponent implements OnInit {
           });
         }
       }
-      this.Listar(); 
+      location.reload();
     }
   
     ShowEd(id : number){
@@ -124,9 +124,7 @@ export class BackendUsuarioComponent implements OnInit {
       .subscribe((result) => { 
         this.lix = result;
       });
-      this.Listar();
-  
-      this.ViewInsert=true;
+      location.reload();
     }
    
 

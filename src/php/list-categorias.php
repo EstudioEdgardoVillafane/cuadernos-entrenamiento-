@@ -11,7 +11,7 @@
 		$sqld = "UPDATE categoria SET status = 0 WHERE id = '".$_GET["id"]."'";
 		$NewConnect->Borrar($sqld);
 	}elseif($_GET["data"]==3){
-		$sql = "INSERT INTO categoria (nombre,status) 
+		$sql = "INSERT INTO categoria (c_categoria,status) 
 		VALUES ('".$_GET["categoriaproducto"]."','1')";
 		$NewConnect->ExecuteSql($sql);
 	}elseif($_GET["data"]==4){
