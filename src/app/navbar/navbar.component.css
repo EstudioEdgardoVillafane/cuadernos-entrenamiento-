@@ -1,5 +1,9 @@
 nav{
-    background-color: rgba(73, 38, 69, 0.72);
+    
+    background-color: rgba(255, 255, 255, 0.72);
+   background-color: rgb(255, 255, 255);
+   box-shadow: 3px 2px 14px #888888c7;
+   min-height:100;
 }
 .nav-link{
     color:white!important;
@@ -7,8 +11,13 @@ nav{
     font-size: 1.4rem!important;
     text-transform: capitalize!important;
 }
-.nav-link:hover{
-    color: #e19effb3!important;
+.nav-link{
+    color: #535353!important;
+}.navbar-nav >li:hover{
+    background-color: #b7b7b7!important;
+}
+.navbar-nav >li:hover ,.nav-link:hover{
+    color: #ffffff!important;
 }
 .a-logo{
    

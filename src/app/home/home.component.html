@@ -1,9 +1,9 @@
-<section id="fondo" class="font-toto ">
+<!-- old -->
+<!-- <section id="fondo" class="font-toto ">
   <app-navbar></app-navbar>
   <div class="container py-3">
     <div class="row pt-1">
       <div class="mx-auto">
-        <!-- <h1 class="title-large">¡ Disfrutá de mi catálogo y elegí el cuaderno que más te guste !</h1> -->
         <h1 class="title-large text-center">¡ Bienvenido a Cuadernos Artesanales !</h1>
         <h4 class="text-white text-center px-1">
           <em>Un espacio creativo y artesanal que acobijará tus más diversos pensamientos</em>
@@ -17,4 +17,31 @@
     </div>
   
   </div>
-</section>
+</section> -->
+<app-navbar></app-navbar>
+<ngb-carousel *ngIf="images" id="ngCarousel">
+  <ng-template ngbSlide class="mx-auto d-flex">
+    <img src="../../assets/img/carrusel.jpg" alt="Random first slide" class="img-fluid">
+    <div class="carousel-caption align-self-center">
+      <h3>First slide label</h3>
+      <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+    </div>
+  </ng-template>
+  <ng-template ngbSlide>
+    <img src="../../assets/img/carrusel.jpg" alt="Random first slide" class="img-fluid">
+    <div class="carousel-caption">
+      <h3>Second slide label</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    </div>
+  </ng-template>
+  <ng-template ngbSlide>
+    <img src="../../assets/img/carrusel.jpg" alt="Random first slide" class="img-fluid">
+    <div class="carousel-caption">
+      <h3>Third slide label</h3>
+      <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+    </div>
+  </ng-template>
+</ngb-carousel>
+<p>
+  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellat sapiente, temporibus molestias incidunt laudantium, dolor nemo placeat error minus ab officia quos, neque odio eveniet voluptate natus veniam deserunt dicta!
+</p>

@@ -11,7 +11,7 @@ import { catchError, map, tap } from 'rxjs/operators';
 export class ContactoService {
   constructor(private Http: Http) { }
   //Definimos como variable privada el HTTP, IMPORTANTE.
-
+  //Warning! Define the HTTP as private variable 
   Conect(Funct: number, id : number, nombre : string, mensaje : string, email : number, telefono :string){
     return this.Http.get('http://localhost/cuadernos/src/php/contacto.php?data='+Funct+'&id='+id+"&nombre="+nombre+"&mensaje="+mensaje+"&telefono="+telefono+"&email="+email);
      //Devuelve el resultado del php como objeto.

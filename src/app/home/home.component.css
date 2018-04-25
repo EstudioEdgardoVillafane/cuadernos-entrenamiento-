@@ -52,3 +52,36 @@
   font-weight: 300;
   font-family: 'Rochester', cursive;
 }
+ngb-carousel{
+  height:90vh !important;
+  overflow:hidden!important;
+}
+#ngCarousel .carousel-caption {
+  top: 50%;
+  
+  bottom: initial;
+}
+#ngCarousel .carousel-indicators li , .carousel-indicators .active {
+  
+  background-color: rgba(0, 0, 0, 0)!important;
+}
+
+/* Rules for mobiles */
+@media screen and (max-width:425px) {
+  ngb-carousel{
+    height:initial!important;
+  }
+}
+
+@media screen and (max-width:1024px) {
+  #ngCarousel .carousel-caption {
+    top: 37%;
+  }
+}
+
+
+@media screen and (max-width:1440px) {
+  #ngCarousel .carousel-caption {
+    top: 29%;
+  }
+}
